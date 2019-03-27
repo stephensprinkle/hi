@@ -1,1 +1,2 @@
-# Copyright Stephen Sprinkle | All Rights Reserved
+# Copyright Stephen Sprinkle
+## All Rights Reserved
