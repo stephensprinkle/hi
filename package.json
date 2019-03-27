@@ -1,0 +1,20 @@
+{
+  "name": "hi-sprinkle-io",
+  "version": "0.0.1",
+  "description": "An expression of Stephen Sprinkle",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/stephensprinkle/hi.git"
+  },
+  "author": "Stephen Sprinkle",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/stephensprinkle/hi/issues"
+  },
+  "homepage": "https://github.com/stephensprinkle/hi#readme"
+}
