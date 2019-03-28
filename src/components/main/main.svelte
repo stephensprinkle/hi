@@ -1,13 +1,22 @@
 <main>
-  <div class="nucleus" >
-    <span>SS</span>
-  </div>
+  <section>
+    <div class="nucleus" >
+      <span>SS</span>
+    </div>
+  </section>
+  <Footer />
 </main>
 
 <style lang='scss'>
-  @import './main.scss';
+  @import './Main.scss';
 </style>
 
 <script>
-// TODO
+import Footer from '../Footer/Footer.svelte';
+
+export default {
+  components: {
+    Footer
+  }
+}
 </script>

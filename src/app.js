@@ -1,4 +1,4 @@
-import Main from './components/main/main.svelte';
+import Main from './components/Main/Main.svelte';
 
 const app = new Main({
   target: document.body
