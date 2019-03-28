@@ -4,6 +4,9 @@
   "description": "An expression of Stephen Sprinkle",
   "main": "index.js",
   "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html",
+    "--": "",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +19,11 @@
   "bugs": {
     "url": "https://github.com/stephensprinkle/hi/issues"
   },
-  "homepage": "https://github.com/stephensprinkle/hi#readme"
+  "homepage": "https://github.com/stephensprinkle/hi#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3",
+    "parcel-plugin-svelte": "^2.1.0-alpha-0",
+    "sass": "^1.17.3",
+    "svelte": "^2.16.1"
+  }
 }
