@@ -1,5 +1,7 @@
 <main>
-  <p>Hello, I'll be functioning soon...</p>
+  <div class="nucleus" >
+    <span>SS</span>
+  </div>
 </main>
 
 <style lang='scss'>
