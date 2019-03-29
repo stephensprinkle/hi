@@ -57,13 +57,24 @@
   }
 
   .comm a {
-    color: #898989;
     text-decoration: none;
+  }
+
+  .comm a i {
+    color: #898989;
     transition: color 0.2s ease-in-out;
   }
 
-  .comm a:hover {
-    color: #666666;
+  .comm a:hover i.icofont-twitter {
+    color: #00aced;
+  }
+
+  .comm a:hover i.icofont-linkedin {
+    color: #0077B5;
+  }
+
+  .comm a:hover i.icofont-email {
+    color: #4286f4;
   }
 
   .comm i {
