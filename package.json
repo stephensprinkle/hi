@@ -21,9 +21,11 @@
   },
   "homepage": "https://github.com/stephensprinkle/hi#readme",
   "devDependencies": {
+    "node-sass": "^4.11.0",
     "parcel-bundler": "^1.12.3",
     "parcel-plugin-svelte": "^2.1.0-alpha-0",
     "sass": "^1.17.3",
-    "svelte": "^2.16.1"
+    "svelte": "^2.16.1",
+    "svelte-preprocess": "^2.5.0"
   }
 }
