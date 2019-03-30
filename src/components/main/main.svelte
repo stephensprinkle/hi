@@ -1,3 +1,5 @@
+<!-- NOTE -- add github -->
+
 <main>
   <section>
     <div class="nucleus" >
@@ -5,13 +7,16 @@
     </div>
     <div class="comm">
       <a href="https://twitter.com/stephensprinkle">
-        <i class="icofont-twitter"/>
+        <i class="fab fa-twitter"></i>
       </a>
-      <a href="https://www.linkedin.com/in/stephensprinkle/">
-        <i class="icofont-linkedin"/>
+      <a href="https://www.linkedin.com/in/stephensprinkle">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://github.com/stephensprinkle">
+        <i class="fab fa-github"></i>
       </a>
       <a href="mailto:hi@sprinkle.io">
-        <i class="icofont-email"/>
+        <i class="far fa-envelope"></i>
       </a>
     </div>
   </section>
@@ -65,16 +70,20 @@
     transition: color 0.2s ease-in-out;
   }
 
-  .comm a:hover i.icofont-twitter {
+  .comm a:hover i.fa-twitter {
     color: #00aced;
   }
 
-  .comm a:hover i.icofont-linkedin {
+  .comm a:hover i.fa-linkedin-in {
     color: #0077B5;
   }
 
-  .comm a:hover i.icofont-email {
-    color: #4286f4;
+  .comm a:hover i.fa-github {
+    color: #333;
+  }
+
+  .comm a:hover i.fa-envelope {
+    color: #4285F4;
   }
 
   .comm i {

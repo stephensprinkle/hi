@@ -1,5 +1,5 @@
 <footer>
-  <p>made with <i class="icofont-ui-love" /> | &copy Stephen Sprinkle | All Rights Reserved</p>
+  <p>made with <i class="fas fa-heart"></i> | &copy Stephen Sprinkle | All Rights Reserved</p>
 </footer>
 
 <style>
