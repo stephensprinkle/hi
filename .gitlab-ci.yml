@@ -38,6 +38,7 @@ deploy-to-github:
     - rm -rf *
     - cd ..
     - cp ./dist/* hi/
+    - cp CNAME hi/
     - cd hi
     - git add .
     - git commit -m "Automated deploy commit based on -- $LAST_COMMIT_MSG | $LAST_COMMIT_ID"
@@ -45,7 +46,7 @@ deploy-to-github:
     - git checkout master
     - rm -rf *
     - cd ..
-    - cp -r . hi/
+    - rsync -av --progress . ./hi/ --exclude hi
     - cd hi
     - git add .
     - git commit -m "Automated deploy commit based on -- $LAST_COMMIT_MSG | $LAST_COMMIT_ID"
