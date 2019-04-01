@@ -28,6 +28,8 @@ deploy-to-github:
     LAST_COMMIT_MSG: 'echo $(git log -1 --pretty=%B)'
     LAST_COMMIT_ID: 'echo $(git log --format="%H" -n 1)'
   script:
+    - npm i
+    - npm run build
     - git clone https://github.com/stephensprinkle/hi.git
     - cd hi
     - git checkout gh-pages
