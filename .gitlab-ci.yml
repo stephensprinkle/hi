@@ -30,6 +30,8 @@ deploy-to-github:
   script:
     - npm i
     - npm run build
+    - git config --global user.email "${GIT_EMAIL}"
+    - git config --global user.name "${GIT_NAME}"
     - git clone https://github.com/stephensprinkle/hi.git
     - cd hi
     - git checkout gh-pages
