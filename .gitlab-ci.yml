@@ -10,7 +10,7 @@ cache:
 
 before_script:
   - apt-get update && apt-get upgrade -y
-  - apt-get install git-core
+  - apt-get install git-core rsync
 
 build-app:
   stage: build
