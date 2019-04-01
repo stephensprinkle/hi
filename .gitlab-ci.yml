@@ -20,7 +20,7 @@ build-app:
     - npm i
     - npm run build
 
-deploy-gh-pages:
+deploy-to-github:
   stage: deploy
   only:
     - master
