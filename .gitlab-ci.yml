@@ -1,0 +1,48 @@
+image: node:latest
+
+stages:
+  - build
+  - deploy
+
+cache:
+  paths:
+    - node_modules/
+
+before_script:
+  - apt update && apt upgrade -y
+  - apt install git
+
+build-app:
+  stage: build
+  only:
+    - master
+  script:
+    - npm i
+    - npm run build
+
+deploy-gh-pages:
+  stage: deploy
+  only:
+    - master
+  variables:
+    LAST_COMMIT_MSG: 'echo $(git log -1 --pretty=%B)'
+    LAST_COMMIT_ID: 'echo $(git log --format="%H" -n 1)'
+  script:
+    - git clone https://github.com/stephensprinkle/hi.git
+    - cd hi
+    - git checkout gh-pages
+    - rm -rf *
+    - cd ..
+    - cp ./dist/* hi/
+    - cd hi
+    - git add .
+    - git commit -m "Automated commit based on -- $LAST_COMMIT_MSG | $LAST_COMMIT_ID"
+    - git push https://${GITHUB_USER}:${GITHUB_PAT}@github.com/stephensprinkle/hi.git
+    - git checkout master
+    - rm -rf *
+    - cd ..
+    - cp -r . hi/
+    - cd hi
+    - git add .
+    - git commit -m "Automated commit based on -- $LAST_COMMIT_MSG | $LAST_COMMIT_ID"
+    - git push https://${GITHUB_USER}:${GITHUB_PAT}@github.com/stephensprinkle/hi.git
