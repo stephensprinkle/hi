@@ -1,5 +1,3 @@
-<!-- NOTE -- add github -->
-
 <main>
   <section>
     <div class="nucleus" >
