@@ -24,9 +24,6 @@ deploy-to-github:
   stage: deploy
   only:
     - master
-  variables:
-    LAST_COMMIT_MSG: echo $(git log -1 --pretty=%B)
-    LAST_COMMIT_ID: echo $(git log --format="%H" -n 1)
   script:
     - npm i
     - npm run build
