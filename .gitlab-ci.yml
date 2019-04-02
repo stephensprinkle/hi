@@ -27,9 +27,11 @@ deploy-to-github:
   script:
     - git config --global user.email "${GIT_EMAIL}"
     - git config --global user.name "${GIT_NAME}"
+    - git remote rename origin origin-bak
+    - git remote add origin https://${GITHUB_USER}:${GITHUB_PAT}@github.com/stephensprinkle/hi.git
     - npm i
     - npm run build
     - cp CNAME ./docs/
     - git add .
-    - git commit -m "Automated deploy commit based on -- $CI_COMMIT_MESSAGE | $CI_COMMIT_SHA"
-    - git push https://${GITHUB_USER}:${GITHUB_PAT}@github.com/stephensprinkle/hi.git master:master
+    - git commit -m "CD based on -- $CI_COMMIT_MESSAGE | $CI_COMMIT_SHA"
+    - git push origin master
