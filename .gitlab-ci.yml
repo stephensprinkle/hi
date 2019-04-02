@@ -34,4 +34,4 @@ deploy-to-github:
     - cp CNAME ./docs/
     - git add .
     - git commit -m "CD based on -- $CI_COMMIT_MESSAGE | $CI_COMMIT_SHA"
-    - git push origin master
+    - git push origin HEAD:master
