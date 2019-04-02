@@ -28,9 +28,13 @@ deploy-to-github:
     - git config --global user.email "${GIT_EMAIL}"
     - git config --global user.name "${GIT_NAME}"
     - git remote set-url origin https://${GITHUB_USER}:${GITHUB_PAT}@github.com/stephensprinkle/hi.git
+    - git checkout -b tmp-github
     - npm i
     - npm run build
     - cp CNAME ./docs/
     - git add .
     - git commit -m "CD based on -- $CI_COMMIT_MESSAGE | $CI_COMMIT_SHA"
+    - git checkout master
+    - git pull
+    - git merge tmp-github
     - git push origin HEAD:master
