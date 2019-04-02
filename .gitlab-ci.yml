@@ -25,20 +25,12 @@ deploy-to-github:
   only:
     - master
   script:
-    - cd ..
-    - ls
     - git config --global user.email "${GIT_EMAIL}"
     - git config --global user.name "${GIT_NAME}"
-    - git clone https://github.com/stephensprinkle/hi.git hi-github
-    - cd hi-github
-    - git checkout master
-    - rm -rf *
-    - cd ../hi/
+    - git remote add github https://${GITHUB_USER}:${GITHUB_PAT}@github.com/stephensprinkle/hi.git
     - npm i
     - npm run build
-    - cp -r . ../hi-github/
-    - cp CNAME ../hi-github/docs/
-    - cd ../hi-github/
+    - cp CNAME ./docs/
     - git add .
     - git commit -m "Automated deploy commit based on -- $CI_COMMIT_MESSAGE | $CI_COMMIT_SHA"
-    - git push https://${GITHUB_USER}:${GITHUB_PAT}@github.com/stephensprinkle/hi.git
+    - git push -u github master 
