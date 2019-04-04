@@ -31,7 +31,7 @@ deploy-to-github:
     - npm i
     - rm -rf docs
     - npm run build
-    - cp CNAME ./docs/
+    - cp CNAME ./docs/ && cp ./src/assets/stephen-sprinkle-resume.pdf ./docs/
     - git add .
     - git commit -m "CD based on -- $CI_COMMIT_MESSAGE | $CI_COMMIT_SHA"
     - git push origin HEAD:master --force
