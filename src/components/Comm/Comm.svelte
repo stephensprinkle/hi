@@ -1,14 +1,26 @@
 <div class="comm">
-  <a href="https://twitter.com/stephensprinkle">
+  <a
+    href="https://twitter.com/stephensprinkle"
+    onclick="captureOutboundLink('https://twitter.com/stephensprinkle'); return false;"
+  >
     <i class="fab fa-twitter"></i>
   </a>
-  <a href="https://www.linkedin.com/in/stephensprinkle">
+  <a
+    href="https://www.linkedin.com/in/stephensprinkle"
+    onclick="captureOutboundLink('https://www.linkedin.com/in/stephensprinkle'); return false;"
+  >
     <i class="fab fa-linkedin-in"></i>
   </a>
-  <a href="https://github.com/stephensprinkle">
+  <a
+    href="https://github.com/stephensprinkle"
+    onclick="captureOutboundLink('https://github.com/stephensprinkle'); return false;"
+  >
     <i class="fab fa-github"></i>
   </a>
-  <a href="mailto:hi@sprinkle.io">
+  <a
+    href="mailto:hi@sprinkle.io"
+    onclick="captureOutboundLink('mailto:hi@sprinkle.io'); return false;"
+  >
     <i class="far fa-envelope"></i>
   </a>
 </div>
