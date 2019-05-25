@@ -2,14 +2,14 @@
   "name": "hi-sprinkle-io",
   "version": "0.0.1",
   "description": "An expression of Stephen Sprinkle",
-  "main": "index.js",
+  "main": "./src/index.html",
   "scripts": {
     "==DEV==": "",
     "dev": "docker run -p 1234:1234 -p 1235:1235 -v `pwd`:/home/node/app -w='/home/node/app' node:lts npm run docker:dev",
-    "docker:dev": "npm run clean && parcel index.html --port 1234 --hmr-port 1235",
+    "docker:dev": "npm run clean && parcel ./src/index.html --port 1234 --hmr-port 1235",
     "==PROD==": "",
     "build": "docker run -v `pwd`:/home/node/app -w='/home/node/app' node:lts npm run docker:build",
-    "docker:build": "npm run clean && rm -rf docs && parcel build index.html -d docs && cp CNAME ./docs/ && cp ./src/assets/stephen-sprinkle-resume.pdf ./docs/",
+    "docker:build": "npm run clean && rm -rf docs && parcel build ./src/index.html -d docs && cp ./src/CNAME ./docs/ && cp ./src/assets/stephen-sprinkle-resume.pdf ./docs/",
     "==UTILITY==": "",
     "clean": "rm -rf node_modules && npm i"
   },
