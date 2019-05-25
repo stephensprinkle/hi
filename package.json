@@ -20,9 +20,6 @@
   "author": "Stephen Sprinkle",
   "license": "SEE LICENSE IN LICENSE.md",
   "private": true,
-  "bugs": {
-    "url": "https://github.com/stephensprinkle/hi/issues"
-  },
   "homepage": "https://github.com/stephensprinkle/hi#readme",
   "devDependencies": {
     "node-sass": "^4.11.0",
