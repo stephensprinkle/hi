@@ -4,11 +4,14 @@
   "description": "An expression of Stephen Sprinkle",
   "main": "index.js",
   "scripts": {
-    "dev": "npm run clean && parcel index.html",
-    "build": "parcel build index.html -d docs",
-    "clean": "rm -rf node_modules && npm i",
-    "--": "",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "==DEV==": "",
+    "dev": "docker-compose -f ./docker-compose.yml up --force-recreate",
+    "docker:dev": "npm run clean && parcel index.html",
+    "==PROD==": "",
+    "build": "docker run -v `pwd`:/home/node/app -w='/home/node/app' node:lts npm run docker:build",
+    "docker:build": "npm run clean && parcel build index.html -d docs",
+    "==UTILITY==": "",
+    "clean": "rm -rf node_modules && npm i"
   },
   "repository": {
     "type": "git",

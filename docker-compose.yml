@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+  hi:
+    image: node:latest
+    container_name: 'hi'
+    networks:
+      - hi-net
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/home/node/app
+    working_dir: /home/node/app
+    command: "/bin/bash -c 'npm run docker:dev'"
+
+networks:
+  hi-net:
+    driver: bridge
